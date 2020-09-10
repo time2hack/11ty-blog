@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body class="p-3">
+  <div class="container text-center">
+    <h1 class="m-5">{{title}}</h1>
+    {{#if banner}}
+      <img class="img rounded mb-3" style="max-height: 400px" src="{{banner}}" alt={{title}} />
+    {{/if}}
+    {{#if tags}}
+      <div class="tags">
+        {{#each tags}}
+          <div class="badge badge-dark">{{this}}</div>
+        {{/each}}
+      </div>
+    {{/if}}
+    <hr />
+    {{{content}}}
+  </div>
+</body>
+</html>
